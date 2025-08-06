@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="I am an aspiring web developer currently specializing in front-end development"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fergus Austria | Web Dev</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <main class="intro">
+        <!-- navigational bar -->
+        <nav class="navbar" id="navbar">
+            <a href="index.html"><div class="circle"></div></a>
+            <ul id="navicons">
+                <li><a id="navs" href="#about">About</a></li>
+                <li><a id="navs" href="#projects">Projects</a></li>
+                <li><a id="navs" href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero or introductory section -->
+        <section class="hero" id="hero">
+            <div class="sub">Aspiring</div>
+            <div class="hook hook-1">Web </div>
+            <div class="hook hook-2">Developer</div>
+            <div class="hook hook-reflect">Developer</div>
+            <div class="random-image">
+                <img src="images/Home_Page.png" alt="home-page">
+                <img src="images/User_Profile_Page.png" alt="profile-page">
+                <img src="images/Learner's_Page.png" alt="learner's-page">
+                <img src="images/Instructor's_Page.png" alt="instructor's-page">
+                <img src="images/Discussions_Page.png" alt="discussions-page">
+            </div>
+        </section>
+        <p class="bio" id="bio">I&apos;m Fergus Austria, a rookie Web Developer rising through the ranks
+            with a steadfast resolve to help realize my clients&apos; imaginations on the web. 
+            By being up-to-date with the trends in UI/UX design, bringing in intuitive, 
+            responsive and eye-catching frontiers will no longer be a far-fetched dream.
+        </p>
+        <a href="#contact" class="call-to-action" id="getInTouchLink">
+            <button id="getInTouchButton">Get in Touch <span id="getInTouchArrow">&gt;&gt;</span></button>
+        </a>
+    </main>
+
+    <!-- tech stack section -->
+    <section class="techs">
+        <h2 class="tech-stack">Tech Stack</h2>
+        <article class="stack-1">
+            <h3 class="webdev-heading">Web Development</h3>
+            <div class="web-container">
+                <!-- add the icons per tech div -->
+                <div class="tech" id="html">
+                    <img src="icons/html5-brands-solid.svg" alt="html5-logo" class="html-icon">
+                    <p>HTML5</p>
+                </div>
+                <div class="tech" id="css">
+                    <img src="icons/css3-alt-brands.svg" alt="css3-logo" class="css-icon">
+                    <p>CSS3</p>
+                </div>
+                <div class="tech" id="jscript">
+                    <img src="icons/js-brands.svg" alt="javascript-logo" class="js-icon">
+                    <p>JavaScript</p>
+                </div>
+                <div class="tech" id="react">
+                    <!-- Add an overlaying banner saying "Learning soon" -->
+                    <img src="icons/react-brands.svg" alt="reactjs-logo" class="react-icon">
+                    <div class="to-be-learned">TO BE LEARNED</div>
+                    <p>React</p>
+                </div>
+            </div>
+        </article>
+
+        <article class="stack-2">
+            <h3 class="design-heading">Design Tools</h3>
+            <div class="design-container">
+                <div class="tool" id="figma">
+                    <img src="icons/figma-brands.svg" alt="figma-logo" class="fig-icon">
+                    <p>Figma</p>
+                </div>
+                <div class="tool" id="canva">
+                    <img src="icons/canva-icon-custom.png" alt="canva-logo" class="canva-icon">
+                    <p>Canva</p>
+                </div>
+                <div class="tool" id="inkscape">
+                    <img src="icons/Inkscape_Logo.svg.png" alt="inkscape-logo" class="inkscape-icon">
+                    <p>Inkscape</p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- projects section -->
+    <section class="projects">
+        <h2 class="project-head" id="projects">Projects</h2>
+        <div class="proj-container">
+            <!-- project 1 -->
+            <div class="project project-1">
+                <a href="lavender-studio.html">
+                    <img src="images/Home_Page.png" alt="Lavender-Studio_Project">
+                    <div class="overview">
+                        <h3>Lavender Studio</h3>
+                        <p>Design Concept | Conceptualized Web Application</p>
+                        <p>A platform for collaboration and mentorship for musicians, 
+                            both for aspiring and seasoned ones.</p>
+                        <div class="build">
+                            <span>Figma</span>
+                            <span>Canva</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts section -->
+    <h2 class="contacts-heading" id="contact"><span class="interested">Interested?</span><br><span class="ping-me"> Ping me!</span></h2>
+
+    <form class="contacts-section" action="#" method="post">
+        <div class="type-name">
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" placeholder="John Doe">
+        </div>
+        <div class="type-email">
+            <label for="email">E-mail</label><br>
+            <input type="email" id="email" name="email" placeholder="abc123@email.com">
+        </div>
+        <div class="type-subject">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Add a heading">
+        </div>
+        <div class="type-msg">
+            <label for="message">Message</label><br>
+            <textarea name="message" id="message" size="50" cols="40" placeholder="Anything you want to say..."></textarea>
+        </div>
+        <div class="submit-or-clear">
+            <input type="submit" value="Ping!">
+            <input type="reset" value="Clear">
+        </div>
+    </form>
+
+    <!-- footer -->
+    <footer>
+        <div class="foot-container">
+            <ul class="foot-navs">
+                <li><a href="https://ph.linkedin.com/in/fergus-matthew-austria-9925b0370" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://github.com/FAust1-159" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+            <p>@2025 Fergus Austria</p>
+        </div>
+    </footer>
+
+     <!-- adtl. smooth scroll-up button -->
+    <a href="#navbar">
+        <button class="scroll-up" id="scrollUp" title="Scrolls Up">
+            <img src="icons/up-long-solid.svg" alt="go up" class="up-icon">
+        </button>
+    </a>
+
+    <script src="utils/index.js"></script>
+</body>
+</html>
