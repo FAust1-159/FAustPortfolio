@@ -1,24 +1,5 @@
-/* for fixed "scroll up" button */
-const scrollUpBtn = document.getElementById("scrollUp");
-
-window.onscroll =  function() {
-
-    if (document.documentElement.scrollTop > 500) {
-        scrollUpBtn.classList.add("appear");
-        scrollUpBtn.classList.remove("disappear");
-    } else {
-        scrollUpBtn.classList.remove("appear");
-        scrollUpBtn.classList.add("disappear");
-    }
-};
-
-scrollUpBtn.addEventListener("click", event => {
-
-    window.scrollTo(0, 0);
-});
-
 /* style manipulation for every project page */
-/* for "SHARE YOUR IDEAS" section's external link animation */
+/* for "SHARE YOU IDEAS" section's external link animation */
 
 // for mouseover elements
 const toDesktopLink = document.getElementById("toDesktop");

@@ -1,21 +1,10 @@
 /* for fixed "scroll up" button */
-const scrollUpBtn = document.getElementById("scrollUp");
+/* const scrollUpBtn = document.getElementById("scrollUp");
 
-window.onscroll =  function() {
+function scrollToTop() {
+    
+} */
 
-    if (document.documentElement.scrollTop > 500) {
-        scrollUpBtn.classList.add("appear");
-        scrollUpBtn.classList.remove("disappear");
-    } else {
-        scrollUpBtn.classList.remove("appear");
-        scrollUpBtn.classList.add("disappear");
-    }
-};
-
-scrollUpBtn.addEventListener("click", event => {
-
-    window.scrollTo(0, 0);
-});
 
 /* style manipulation for HOME page */
 // for mouseenter elements
@@ -37,5 +26,3 @@ getInTouchLink.addEventListener("mouseleave", event => {
     getInTouchButton.classList.remove("change-color");
     getInTouchArrow.classList.remove("shift-right", "change-color");
 });
-
-console.log(window.scrollY);

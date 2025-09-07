@@ -5,22 +5,10 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: Rubik;
-    src: url(../fonts/Rubik-Regular.ttf) format('truetype');
-    font-style: normal;
-}
-
 /* For body or general text typography */
 @font-face {
     font-family: Fira-Regular;
     src: url(../fonts/FiraSans-Regular.ttf) format('truetype');
-    font-style: normal;
-}
-
-@font-face {
-    font-family: Manrope;
-    src: url(../fonts/Manrope-Regular.ttf) format('truetype');
     font-style: normal;
 }
 
@@ -33,7 +21,7 @@ html {
 }
 
 body {
-    font-family: 'Manrope', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Fira-Regular', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     flex-direction: column;
     margin: 0 20px;
@@ -54,8 +42,7 @@ main {
 /* main, section, form { margin: 0 20px; } */
 
 /* for Nav bar */
-main nav {
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -70,14 +57,14 @@ main nav {
                 -4px -4px 25px 4px #ebaa11;
 }
 
-main nav a .circle {
+nav .circle {
     width: 25px;
     aspect-ratio: 1;
     border-radius: 16px;
     background-color: #5C7BA9;
 }
 
-main nav ul {
+nav ul {
     /* margin: 0 auto; */
     width: 90%;
     height: auto;
@@ -88,33 +75,14 @@ main nav ul {
     justify-content: space-evenly;
 }
 
-main nav ul li {
+nav ul li {
     font-size: clamp(13px, 2vw, 16px);
-}
-
-main nav ul li a {
-    position: relative;
-    padding-bottom: 2px;
-}
-
-main nav ul li a::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #5C7BA9;
-    transition: width 0.2s ease;
-}
-
-main nav ul li a:hover::after {
-    width: 100%;
 }
 
 #navs {
     text-decoration: none;
     text-transform: uppercase;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     font-size: 0.875em;
     color: hsl(106, 63%, 19%);
 }
@@ -129,18 +97,15 @@ main section {
     align-items: center;
 }
 
-main section .name {
+main section .sub {
     grid-area: 1 / 1 / 2 / 3;
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
     font-size: clamp(16px, 4vw, 24px);
-    font-style: italic;
-    color: #375891;
+    color: #3758918a;
 }
 
 main section .hook {
     font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
-    /* font-size: clamp(2.5rem, 12vw, 5.5rem); */
-    font-size: clamp(2.5rem, 1.591rem + 4.55vw, 5rem);
+    font-size: clamp(2.5rem, 12vw, 5.5rem);
     color: #375891;
     text-shadow: 2px 2px 15px #5C7BA9;
 }
@@ -211,7 +176,7 @@ main section .hook-reflect {
     40%, 90% { opacity: 0; }
 }
 
-main p.bio {
+main .bio {
     margin-top: 75px;
     width: min(85%, 880px);
     font-size: min(1.2rem, 24px);
@@ -222,7 +187,7 @@ main p.bio {
 }
 
 main a button {
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     font-size: clamp(1rem, 5vw, 24px);
     border: none;
     border-radius: 50px;
@@ -274,13 +239,13 @@ section article.stack-2 {
 }
 
 section article h3.webdev-heading {
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     margin-bottom: 30px;
     color: #5C7BA9;
 }
 
 section article h3.design-heading {
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     margin-bottom: 30px;
     color: #5C7BA9;
 }
@@ -303,7 +268,7 @@ section article h3.design-heading {
     padding: 10px;
     background-color: #B0CCF5; /* remove after use */
     color: #5C7BA9;
-    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
+    font-weight: 600;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -336,7 +301,6 @@ section article h3.design-heading {
 
 /* the "to be learned" banner for React */
 .to-be-learned {
-    font-family: 'Rubik', system-ui;
     background-color: #5C7BA9;
     color: white;
     width: 100%;
@@ -374,11 +338,11 @@ section.projects {
 
 section .proj-container {
     display: grid;
-    grid-template: auto / repeat(auto-fit, minmax(min(350px, 50%), 1fr));
+    grid-template: auto / auto;
     gap: 10px;
     background-color: #B0CCF5;
     width: 100%;
-    height: /* 700px */ auto; /* make auto when content is available */
+    height: 700px /* auto */; /* make auto when content is available */
     margin-top: 30px;
     padding: 1.5em;
     border-radius: 10px;
@@ -387,7 +351,6 @@ section .proj-container {
     /* overflow: hidden; */
 }
 
-/* styles per project item */
 section .proj-container div.project {
     overflow: hidden;
 }
@@ -417,15 +380,15 @@ section .proj-container div a img {
 
 section .proj-container div a div.overview {
     background-color: #5C7BA9;
-    padding: 5px 15px 20px 15px;
+    padding: 15px 15px 20px 15px;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 -20px 40px 30px #5C7BA9;
+    box-shadow: 0 -25px 50px 0 #5C7BA9;
     position: relative;
     z-index: 2;
 }
 
 section .proj-container div a div.overview h3 {
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     color: #CAEBFF;
     margin: 0;
 }
@@ -450,7 +413,6 @@ section .proj-container div a div.overview .build {
 
 section .proj-container div a div.overview .build span {
     margin-right: 10px;
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
 }
 
 section .proj-container div a div.overview .build span:nth-child(1) {
@@ -496,7 +458,7 @@ form.contacts-section {
 
 label {
     color: #5C7BA9;
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-weight: 600;
 }
 
 input[type=text], input[type=email] {
@@ -534,7 +496,7 @@ input[type=submit] {
     margin: 15px 10px 0 0;
     border: none;
     border-radius: 5px;
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     background-color: #B0CCF5;
     color: #5C7BA9;
     box-shadow: 4px 4px 8px 0 #96add0, 
@@ -559,7 +521,7 @@ input[type=reset] {
     margin: 15px 10px 0 0;
     border: 2px solid #5C7BA9;
     border-radius: 5px;
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     background-color: #B0CCF5;
     color: #5C7BA9;
     box-shadow: 4px 4px 8px 0 #96add0, 
@@ -594,7 +556,7 @@ input[type=text]:focus, input[type=email]:focus, textarea:focus {
 /* footer styles start here */
 footer {
     margin-top: 10rem;
-    font-family: 'Rubik', Tahoma, Verdana, sans-serif;
+    font-family: 'Rubik-Medium', Tahoma, Verdana, sans-serif;
     font-size: 14px;
     border-top: 2px solid rgba(92, 123, 169, 0.4);
 }
@@ -628,9 +590,9 @@ footer {
 }
 
 /* fixed scroll button */
-.scroll-up {
+a .scroll-up {
     position: fixed;
-    /* bottom: 20px; */
+    bottom: 20px;
     right: 20px;
     padding: 5px;
     font-size: 0.75rem;
@@ -641,20 +603,9 @@ footer {
     height: 3.5em;
     width: 3.5em;
     border-radius: 50%;
-    opacity: 0;
+    /* display: none;     for interactivity with JS*/
     cursor: pointer;
     z-index: 99;
-    box-shadow: 0 4px 8px rgba(55, 88, 145, 0.5);
-}
-
-@keyframes appear {
-    0% { opacity: 0; bottom: 50px; }
-    100% { opacity: 1; bottom: 20px; }
-}
-
-@keyframes disappear {
-    0% { opacity: 1; bottom: 20px; }
-    100% { opacity: 0; bottom: 50px; }
 }
 
 /* CLASSLIST styles */
@@ -666,15 +617,6 @@ footer {
     color: #5C7BA9;
 }
 
-.appear {
-    display: block;
-    animation: appear 0.3s forwards;
-}
-
-.disappear {
-    animation: disappear 0.3s;
-}
-
 /* FOR DIFFERENT MOBILE DEVICES */
 /* for tablet screen width */
 @media screen and (min-width: 601px) and (max-width: 900px) {
@@ -683,7 +625,7 @@ footer {
         margin: 0;
     }
     
-    main nav {
+    nav {
         margin: 0 0 75px;
     }
 
@@ -692,9 +634,9 @@ footer {
         margin: 20px 60px 0; /* change */
     }
 
-    /* main section .hook {
+    main section .hook {
         font-size: min(10vw, 5.5rem);
-    } */
+    }
 
     /* Tech Stack section changes */
     section.techs {
@@ -730,6 +672,10 @@ footer {
         grid-area: 3 / 1 / 4 / 3;
     }
 
+    /* .submit-or-clear {
+        grid-area: ;
+    } */
+
     /* footer here */
     footer {
         padding: 0 20px; /* change */
@@ -750,8 +696,8 @@ footer {
 
     /* scroll up button goes here */
     a .scroll-up {
-        opacity: 0;
-        right: 50px;
+        bottom: 10%;
+        right: 10%;
     }
 }
 
@@ -762,7 +708,7 @@ footer {
         margin: 0;
     }
 
-    main nav {
+    nav {
         margin: 0 0 75px; /* change */
     }
 
@@ -776,7 +722,7 @@ footer {
         grid-template: repeat(4, auto) / repeat(2, auto);
     }
 
-    main section .name {
+    main section .sub {
         grid-area: 1 / 1 / 2 / 2;
     }
 
@@ -791,10 +737,6 @@ footer {
     main section .hook-reflect {
         display: block;
         grid-area: 4 / 1 / 5 / 2;
-    }
-
-    main p.bio {
-        margin-top: 30px;
     }
 
     .random-image {
@@ -814,6 +756,15 @@ footer {
     /* projects section */
     section.projects {
         margin: 100px 90px 100px; /* change */
+    }
+
+    section .proj-container {
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+    }
+
+    section .proj-container a.project-1 {
+        grid-area: 1 / 1 / 2 / 2;
     }
 
     /* contacts section */
@@ -854,25 +805,26 @@ footer {
     }
 
     /* scroll up button goes here */
-    .scroll-up {
-        right: 50px;
-        opacity: 0;
+    a .scroll-up {
+        bottom: 10%;
+        right: 10%;
+        opacity: 0.7;
         transition: 0.3s ease-in-out;
         cursor: pointer;
         transform: scale(0.7);
     }
 
-    .scroll-up img {
+    a .scroll-up img {
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
     }
 
-    .scroll-up:hover {
+    a .scroll-up:hover {
         opacity: 1;
         transform: scale(1);
     }
 
-    .scroll-up img:hover {
+    a .scroll-up img:hover {
         opacity: 1;
     }
 }
@@ -884,7 +836,7 @@ footer {
         margin: 0;
     }
 
-    main nav {
+    nav {
         margin: 0 0 75px; /* change */
     }
 
@@ -898,7 +850,7 @@ footer {
         grid-template: repeat(4, auto) / repeat(2, auto);
     }
 
-    main section .name {
+    main section .sub {
         grid-area: 1 / 1 / 2 / 2;
     }
 
@@ -919,10 +871,6 @@ footer {
         grid-area: 4 / 1 / 5 / 2;
     }
 
-    main p.bio {
-        margin-top: 30px;
-    }
-
     .random-image {
         grid-area: 1 / 2 / 5 / 3;
         height: 325px;
@@ -940,6 +888,15 @@ footer {
     /* projects section */
     section.projects {
         margin: 100px 150px 100px; /* change */
+    }
+
+    section .proj-container {
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+    }
+
+    section .proj-container a.project-1 {
+        grid-area: 1 / 1 / 2 / 2;
     }
 
     /* contacts section */
@@ -980,25 +937,26 @@ footer {
     }
 
     /* scroll up button goes here */
-    .scroll-up {
-        right: 50px;
-        opacity: 0;
+    a .scroll-up {
+        bottom: 10%;
+        right: 5%;
+        opacity: 0.7;
         transition: 0.3s ease-in-out;
         cursor: pointer;
         transform: scale(0.7);
     }
 
-    .scroll-up img {
+    a .scroll-up img {
         opacity: 0;
         transition: opacity 0.2s ease-in-out;
     }
 
-    .scroll-up:hover {
+    a .scroll-up:hover {
         opacity: 1;
         transform: scale(1);
     }
 
-    .scroll-up img:hover {
+    a .scroll-up img:hover {
         opacity: 1;
     }
 }
