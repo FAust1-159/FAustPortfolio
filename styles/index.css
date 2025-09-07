@@ -388,7 +388,7 @@ section .proj-container {
 }
 
 /* styles per project item */
-section .proj-container div.project {
+section .proj-container div {
     overflow: hidden;
 }
 
@@ -439,13 +439,14 @@ section .proj-container div a div.overview p:nth-child(2) {
 section .proj-container div a div.overview p:nth-child(3){
     color: #CAEBFF;
     font-size: 0.875rem;
-    margin-top: 25px;
-    margin-bottom: 0;
+    margin: 25px 0;
 }
 
 section .proj-container div a div.overview .build {
-    margin-top: 25px;
     font-size: 11px;
+    height: 30px;
+    display: flex;
+    align-items: center;
 }
 
 section .proj-container div a div.overview .build span {
@@ -453,6 +454,7 @@ section .proj-container div a div.overview .build span {
     font-family: 'Rubik', Tahoma, Verdana, sans-serif;
 }
 
+/* Lavender Studio card BUILD styles */
 section .proj-container div a div.overview .build span:nth-child(1) {
     background-color: #F8D8FF;
     color: #375891;
@@ -462,6 +464,35 @@ section .proj-container div a div.overview .build span:nth-child(1) {
 
 section .proj-container div a div.overview .build span:nth-child(2) {
     background-color: #CAEBFF;
+    color: #375891;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+/* ZZZ-Calculator card BUILD styles */
+section .proj-container div.project-2 a div.overview .build span:nth-child(1) {
+    background-color: #f88b67;
+    color: #375891;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+section .proj-container div.project-2 a div.overview .build span:nth-child(2) {
+    background-color: #CAEBFF;
+    color: #375891;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+section .proj-container div.project-2 a div.overview .build span:nth-child(3) {
+    background-color: #FFD500;
+    color: #375891;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+section .proj-container div.project-2 a div.overview .build span:nth-child(4) {
+    background-color: #79c9fa;
     color: #375891;
     border-radius: 20px;
     padding: 5px 10px;
